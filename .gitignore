@@ -1,35 +1,27 @@
-# Ignore data files
 *.csv
 *.json
 *.tsv
 
-# Ignore numpy / pickle / model outputs
 *.npy
 *.npz
 *.pkl
 *.joblib
 
-# Ignore model checkpoints and logs
 *.ckpt
 *.pt
 *.pth
 *.log
 
-# Ignore Jupyter notebook checkpoints
 .ipynb_checkpoints/
 
-# Ignore Python cache
 __pycache__/
 *.pyc
 
-# Ignore OS files (macOS, Windows, etc.)
 .DS_Store
 Thumbs.db
 
-# Ignore environment files (optional)
 .env
 *.env
 
-# Ignore temporary files
 *.tmp
 *.bak
