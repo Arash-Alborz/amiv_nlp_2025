@@ -1,0 +1,70 @@
+=== Trait: Openness ===
+Accuracy: 0.2500
+F1-score (macro): 0.2000
+              precision    recall  f1-score   support
+
+        High       0.71      0.28      0.40        18
+         Low       0.14      0.33      0.20         6
+      Medium       0.00      0.00      0.00         4
+
+    accuracy                           0.25        28
+   macro avg       0.29      0.20      0.20        28
+weighted avg       0.49      0.25      0.30        28
+
+
+=== Trait: Conscientiousness ===
+Accuracy: 0.1786
+F1-score (macro): 0.1632
+              precision    recall  f1-score   support
+
+        High       0.21      0.60      0.32         5
+         Low       0.40      0.11      0.17        18
+      Medium       0.00      0.00      0.00         5
+
+    accuracy                           0.18        28
+   macro avg       0.20      0.24      0.16        28
+weighted avg       0.30      0.18      0.17        28
+
+
+=== Trait: Extraversion ===
+Accuracy: 0.3214
+F1-score (macro): 0.2878
+              precision    recall  f1-score   support
+
+        High       0.29      0.22      0.25         9
+         Low       0.43      0.55      0.48        11
+      Medium       0.14      0.12      0.13         8
+
+    accuracy                           0.32        28
+   macro avg       0.29      0.30      0.29        28
+weighted avg       0.30      0.32      0.31        28
+
+
+=== Trait: Agreeableness ===
+Accuracy: 0.2500
+F1-score (macro): 0.1822
+              precision    recall  f1-score   support
+
+        High       0.57      0.19      0.29        21
+         Low       0.16      0.75      0.26         4
+      Medium       0.00      0.00      0.00         3
+
+    accuracy                           0.25        28
+   macro avg       0.24      0.31      0.18        28
+weighted avg       0.45      0.25      0.25        28
+
+
+=== Trait: Neuroticism ===
+Accuracy: 0.4643
+F1-score (macro): 0.4513
+              precision    recall  f1-score   support
+
+        High       0.18      0.67      0.29         3
+         Low       1.00      0.42      0.59        12
+      Medium       0.50      0.46      0.48        13
+
+    accuracy                           0.46        28
+   macro avg       0.56      0.51      0.45        28
+weighted avg       0.68      0.46      0.51        28
+
+
