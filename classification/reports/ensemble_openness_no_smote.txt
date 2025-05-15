@@ -1,0 +1,12 @@
+Classification Report - Openness (Ensemble NO SMOTE)
+Accuracy: 0.5032
+F1-score (macro): 0.3841
+              precision    recall  f1-score   support
+
+        high       0.57      0.74      0.65       251
+         low       0.21      0.12      0.15        86
+      medium       0.42      0.31      0.36       134
+
+    accuracy                           0.50       471
+   macro avg       0.40      0.39      0.38       471
+weighted avg       0.46      0.50      0.47       471
