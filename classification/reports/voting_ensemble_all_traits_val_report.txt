@@ -1,71 +1,71 @@
-Classification Reports - Voting Ensemble with SMOTE (Train/Val Split)
+Classification Reports - Voting Ensemble (Train/Val Split)
 
 
 === OPENNESS ===
-Accuracy: 0.6250
-F1-score (macro): 0.2564
+Accuracy: 0.5625
+F1-score (macro): 0.2400
               precision    recall  f1-score   support
 
-        high       0.62      1.00      0.77        20
+        high       0.60      0.90      0.72        20
          low       0.00      0.00      0.00         8
       medium       0.00      0.00      0.00         4
 
-    accuracy                           0.62        32
-   macro avg       0.21      0.33      0.26        32
-weighted avg       0.39      0.62      0.48        32
+    accuracy                           0.56        32
+   macro avg       0.20      0.30      0.24        32
+weighted avg       0.38      0.56      0.45        32
 
 
 === CONSCIENTIOUSNESS ===
-Accuracy: 0.2500
-F1-score (macro): 0.2494
+Accuracy: 0.3750
+F1-score (macro): 0.3496
               precision    recall  f1-score   support
 
-        high       0.17      0.67      0.28         6
-         low       0.43      0.15      0.22        20
-      medium       0.50      0.17      0.25         6
+        high       0.19      0.67      0.30         6
+         low       0.70      0.35      0.47        20
+      medium       1.00      0.17      0.29         6
 
-    accuracy                           0.25        32
-   macro avg       0.37      0.33      0.25        32
-weighted avg       0.39      0.25      0.24        32
+    accuracy                           0.38        32
+   macro avg       0.63      0.39      0.35        32
+weighted avg       0.66      0.38      0.40        32
 
 
 === EXTRAVERSION ===
-Accuracy: 0.3438
-F1-score (macro): 0.1705
+Accuracy: 0.3750
+F1-score (macro): 0.1818
               precision    recall  f1-score   support
 
         high       0.00      0.00      0.00        10
-         low       0.37      0.85      0.51        13
+         low       0.39      0.92      0.55        13
       medium       0.00      0.00      0.00         9
 
-    accuracy                           0.34        32
-   macro avg       0.12      0.28      0.17        32
-weighted avg       0.15      0.34      0.21        32
+    accuracy                           0.38        32
+   macro avg       0.13      0.31      0.18        32
+weighted avg       0.16      0.38      0.22        32
 
 
 === AGREEABLENESS ===
-Accuracy: 0.1562
-F1-score (macro): 0.0901
+Accuracy: 0.1875
+F1-score (macro): 0.1193
               precision    recall  f1-score   support
 
-        high       0.00      0.00      0.00        24
-         low       0.16      1.00      0.27         5
+        high       1.00      0.04      0.08        24
+         low       0.16      1.00      0.28         5
       medium       0.00      0.00      0.00         3
 
-    accuracy                           0.16        32
-   macro avg       0.05      0.33      0.09        32
-weighted avg       0.02      0.16      0.04        32
+    accuracy                           0.19        32
+   macro avg       0.39      0.35      0.12        32
+weighted avg       0.78      0.19      0.10        32
 
 
 === EMOTIONAL STABILITY ===
-Accuracy: 0.4375
-F1-score (macro): 0.2968
+Accuracy: 0.4688
+F1-score (macro): 0.2128
               precision    recall  f1-score   support
 
-        high       0.33      0.25      0.29         4
+        high       0.00      0.00      0.00         4
          low       0.00      0.00      0.00        13
-      medium       0.46      0.87      0.60        15
+      medium       0.47      1.00      0.64        15
 
-    accuracy                           0.44        32
-   macro avg       0.27      0.37      0.30        32
-weighted avg       0.26      0.44      0.32        32
+    accuracy                           0.47        32
+   macro avg       0.16      0.33      0.21        32
+weighted avg       0.22      0.47      0.30        32

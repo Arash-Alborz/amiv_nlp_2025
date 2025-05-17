@@ -1,119 +1,139 @@
-#  **amiv_nlp_2025**
-#  **University Of Antwerp**
+# Personality Trait Predictor — AMIV NLP 2025  
+University of Antwerp
 
-This repository contains the code and scripts for the **Personality Prediction Project** using TF-IDF, Embeddings, and Regression Models.
+This project predicts **Big Five personality traits (OCEAN)** from English text using a combination of:
 
-The project includes:
+- DistilBERT embeddings  
+- LIWC-style psycholinguistic features  
+- An ensemble classifier (Random Forest, XGBoost, MLP, SVM)
 
-Preprocessing text data (e.g. TF-IDF, embeddings)  
-Training regression models (e.g. Ridge, Random Forest, XGBoost, Ensembles)  
-Classification step based on regression outputs (binning → low, medium, high)  
-Evaluation (Accuracy, F1-score, Classification Reports)
+The five traits predicted are:
+- **Openness**
+- **Conscientiousness**
+- **Extraversion**
+- **Agreeableness**
+- **Emotional Stability**
+
+Each trait is classified as:
+- `low`
+- `medium`
+- `high`
 
 ---
 
-##  Getting Started
+## Features
 
-### Clone the Repository
+- Accepts raw free-form text (e.g., job interview answers)
+- Extracts both semantic (BERT) and psycholinguistic (LIWC) features
+- Outputs all 5 personality traits using a custom-trained ensemble
+- Can be used locally or deployed via Gradio (demo available)
 
-```bash
-git clone https://github.com/YourUsername/amiv_nlp_2025.git
-cd amiv_nlp_2025
+---
+
+## Quick Usage (Python)
+
+```python
+from personality_model import PersonalityClassifier
+
+model = PersonalityClassifier()
+
+text = "I love exploring new cultures and trying unusual foods. I often seek out unfamiliar ideas and perspectives."
+
+result = model.predict_all_traits(text)
+print(result)
 ```
 
-### Python Version
+Expected output:
 
-This project requires **Python 3.9**.  
-Please make sure your Conda environment uses Python 3.9 to avoid compatibility issues.
-
-```bash
-conda create -n amiv_nlp_2025 python=3.9
-conda activate amiv_nlp_2025
+```python
+{
+  "Openness": "high",
+  "Conscientiousness": "medium",
+  "Extraversion": "low",
+  "Agreeableness": "high",
+  "Emotional stability": "medium"
+}
 ```
-
-### Install Requirements
-
-Install all the required Python packages:
-
-```bash
-pip install -r requirements.txt
-```
-
-(see `requirements.txt` for exact versions)
 
 ---
 
 ## Project Structure
 
 ```
-├── preprocessing/
-│   ├── embedding_DistilBERT.ipynb
-│   ├── tfidf_vectorizer.ipynb
-│
-├── evaluation/
-│   ├── ...
-│
-├── config.py
+├── personality_model.py          # PersonalityClassifier pipeline
+├── test_personality_model.py     # CLI tester
+├── feature_extraction/
+│   ├── __init__.py
+│   ├── embedding_from_text.py
+│   ├── liwc_from_text.py
+├── models/
+│   ├── openness_classifier.pkl
+│   ├── conscientiousness_classifier.pkl
+│   ├── extraversion_classifier.pkl
+│   ├── agreeableness_classifier.pkl
+│   ├── emotional_stability_classifier.pkl
+│   ├── feature_scaler.pkl
+│   ├── output.dic
 ├── requirements.txt
 ├── README.md
 ```
 
 ---
 
-## Preprocessing
+## Modeling Details
 
-- All data processing and feature extraction is done in the `preprocessing/` folder.
-- Two main methods:
-  - **TF-IDF vectorization**
-  - **BERT/DistilBERT embeddings**
-
-The output is stored as `.csv` files and later used in regression models.
-
----
-
-##  Modeling 
-
-Once the data is preprocessed:
-
-- Train **Regression Models** (Ridge, RandomForest, XGBoost, Ensemble)
-- Predict Big Five personality scores as continuous values
-- Apply **Binning function** to convert continuous scores to categories (Low, Medium, High)
-- Evaluate with:
-  - Accuracy
-  - F1-score
-  - Classification Report
-
-All evaluation and modeling scripts are in `evaluation/` folder.
-
-## Binning Rules
-
-The personality trait scores (0–100) are converted into categorical labels using the following rules:
-
-| Score Range | Bin Label |
-|-------------|-----------|
-| 0 ≤ score ≤ 32 | Low |
-| 33 ≤ score ≤ 66 | Medium |
-| 67 ≤ score ≤ 100 | High |
-
-**Explanation:**
-
-- If the score is between **0 and 32 (inclusive)** → Label: `Low`
-- If the score is between **33 and 66 (inclusive)** → Label: `Medium`
-- If the score is between **67 and 100 (inclusive)** → Label: `High`
-
-
-You can use this function to assign bin labels to any numerical personality score.
+- Ensemble of 4 classifiers (VotingClassifier):
+  - `RandomForestClassifier`
+  - `GradientBoostingClassifier`
+  - `MLPClassifier`
+  - `SVC (linear)`
+- Each trait has a separate classifier trained on combined BERT+LIWC features
+- LIWC-style dictionary created from `output.dic`
 
 ---
 
-## Notes and Best Practices
+## Preprocessing & Binning (for original experiments)
 
-- Large datasets (TF-IDF `.csv`, raw `.json` etc.) should be **ignored using `.gitignore`** and should NOT be pushed to GitHub.
-- Configurations (paths, parameters) should go into `config.py` to keep notebooks/scripts clean.
-- Recommended Conda usage → easier reproducibility.
+The original project also included regression models and binning rules:
+
+| Score Range       | Bin Label |
+|-------------------|-----------|
+| 0 ≤ score ≤ 32    | Low       |
+| 33 ≤ score ≤ 66   | Medium    |
+| 67 ≤ score ≤ 100  | High      |
+
+These were used to convert continuous personality scores into discrete labels.
 
 ---
 
-## Contact
+## Evaluation Scripts
 
-For questions and contributions → open an issue or contact amiv_nlp_2025 University of Antwerp
+- Located in `evaluation/` folder (not shown here)
+- Used during development to benchmark model performance
+- Final classifiers are saved in `models/`
+
+---
+
+## Installation & Environment
+
+Python: `3.9`  
+Recommended: `conda` environment
+
+```bash
+conda create -n amiv_nlp_2025 python=3.9
+conda activate amiv_nlp_2025
+pip install -r requirements.txt
+```
+
+---
+
+## License
+
+For research and non-commercial use. Contact the author for other permissions.
+
+---
+
+## Authors
+
+Developed by 
+AMIV NLP 2025 — University of Antwerp  
