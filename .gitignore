@@ -25,3 +25,5 @@ Thumbs.db
 
 *.tmp
 *.bak
+
+echo "hf_personality_model/" >> .gitignore
