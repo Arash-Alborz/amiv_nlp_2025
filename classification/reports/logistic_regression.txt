@@ -1,0 +1,71 @@
+Classification Reports - Logistic Regression (Train/Val Split)
+
+=== Trait: Openness ===
+Accuracy: 0.3750
+F1-score (macro): 0.3886
+              precision    recall  f1-score   support
+
+        high       0.67      0.30      0.41        20
+         low       0.22      0.50      0.31         8
+      medium       0.40      0.50      0.44         4
+
+    accuracy                           0.38        32
+   macro avg       0.43      0.43      0.39        32
+weighted avg       0.52      0.38      0.39        32
+
+
+=== Trait: Conscientiousness ===
+Accuracy: 0.2500
+F1-score (macro): 0.2619
+              precision    recall  f1-score   support
+
+        high       0.19      0.50      0.27         6
+         low       0.40      0.10      0.16        20
+      medium       0.27      0.50      0.35         6
+
+    accuracy                           0.25        32
+   macro avg       0.29      0.37      0.26        32
+weighted avg       0.34      0.25      0.22        32
+
+
+=== Trait: Extraversion ===
+Accuracy: 0.3750
+F1-score (macro): 0.2426
+              precision    recall  f1-score   support
+
+        high       0.00      0.00      0.00        10
+         low       0.46      0.85      0.59        13
+      medium       0.17      0.11      0.13         9
+
+    accuracy                           0.38        32
+   macro avg       0.21      0.32      0.24        32
+weighted avg       0.23      0.38      0.28        32
+
+
+=== Trait: Agreeableness ===
+Accuracy: 0.1875
+F1-score (macro): 0.1356
+              precision    recall  f1-score   support
+
+        high       0.60      0.12      0.21        24
+         low       0.12      0.60      0.20         5
+      medium       0.00      0.00      0.00         3
+
+    accuracy                           0.19        32
+   macro avg       0.24      0.24      0.14        32
+weighted avg       0.47      0.19      0.19        32
+
+
+=== Trait: Emotional stability ===
+Accuracy: 0.4375
+F1-score (macro): 0.3889
+              precision    recall  f1-score   support
+
+        high       0.27      1.00      0.42         4
+         low       0.33      0.08      0.12        13
+      medium       0.64      0.60      0.62        15
+
+    accuracy                           0.44        32
+   macro avg       0.41      0.56      0.39        32
+weighted avg       0.47      0.44      0.39        32
+

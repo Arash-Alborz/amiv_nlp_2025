@@ -1,0 +1,71 @@
+Classification Reports - Voting Ensemble (Train/Val Split)
+
+
+=== OPENNESS ===
+Accuracy: 0.4375
+F1-score (macro): 0.2029
+              precision    recall  f1-score   support
+
+        high       0.54      0.70      0.61        20
+         low       0.00      0.00      0.00         8
+      medium       0.00      0.00      0.00         4
+
+    accuracy                           0.44        32
+   macro avg       0.18      0.23      0.20        32
+weighted avg       0.34      0.44      0.38        32
+
+
+=== CONSCIENTIOUSNESS ===
+Accuracy: 0.3125
+F1-score (macro): 0.3062
+              precision    recall  f1-score   support
+
+        high       0.17      0.67      0.28         6
+         low       0.62      0.25      0.36        20
+      medium       1.00      0.17      0.29         6
+
+    accuracy                           0.31        32
+   macro avg       0.60      0.36      0.31        32
+weighted avg       0.61      0.31      0.33        32
+
+
+=== EXTRAVERSION ===
+Accuracy: 0.3750
+F1-score (macro): 0.1818
+              precision    recall  f1-score   support
+
+        high       0.00      0.00      0.00        10
+         low       0.39      0.92      0.55        13
+      medium       0.00      0.00      0.00         9
+
+    accuracy                           0.38        32
+   macro avg       0.13      0.31      0.18        32
+weighted avg       0.16      0.38      0.22        32
+
+
+=== AGREEABLENESS ===
+Accuracy: 0.1875
+F1-score (macro): 0.1193
+              precision    recall  f1-score   support
+
+        high       1.00      0.04      0.08        24
+         low       0.16      1.00      0.28         5
+      medium       0.00      0.00      0.00         3
+
+    accuracy                           0.19        32
+   macro avg       0.39      0.35      0.12        32
+weighted avg       0.78      0.19      0.10        32
+
+
+=== EMOTIONAL STABILITY ===
+Accuracy: 0.4688
+F1-score (macro): 0.2128
+              precision    recall  f1-score   support
+
+        high       0.00      0.00      0.00         4
+         low       0.00      0.00      0.00        13
+      medium       0.47      1.00      0.64        15
+
+    accuracy                           0.47        32
+   macro avg       0.16      0.33      0.21        32
+weighted avg       0.22      0.47      0.30        32

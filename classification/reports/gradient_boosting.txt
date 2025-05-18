@@ -1,0 +1,71 @@
+Classification Reports - Gradient Boosting (Train/Val Split)
+
+=== Trait: Openness ===
+Accuracy: 0.6250
+F1-score (macro): 0.2564
+              precision    recall  f1-score   support
+
+        high       0.62      1.00      0.77        20
+         low       0.00      0.00      0.00         8
+      medium       0.00      0.00      0.00         4
+
+    accuracy                           0.62        32
+   macro avg       0.21      0.33      0.26        32
+weighted avg       0.39      0.62      0.48        32
+
+
+=== Trait: Conscientiousness ===
+Accuracy: 0.4062
+F1-score (macro): 0.2924
+              precision    recall  f1-score   support
+
+        high       0.24      0.67      0.35         6
+         low       0.64      0.45      0.53        20
+      medium       0.00      0.00      0.00         6
+
+    accuracy                           0.41        32
+   macro avg       0.29      0.37      0.29        32
+weighted avg       0.45      0.41      0.40        32
+
+
+=== Trait: Extraversion ===
+Accuracy: 0.3438
+F1-score (macro): 0.2688
+              precision    recall  f1-score   support
+
+        high       0.26      0.50      0.34        10
+         low       0.46      0.46      0.46        13
+      medium       0.00      0.00      0.00         9
+
+    accuracy                           0.34        32
+   macro avg       0.24      0.32      0.27        32
+weighted avg       0.27      0.34      0.30        32
+
+
+=== Trait: Agreeableness ===
+Accuracy: 0.1250
+F1-score (macro): 0.0784
+              precision    recall  f1-score   support
+
+        high       0.00      0.00      0.00        24
+         low       0.14      0.80      0.24         5
+      medium       0.00      0.00      0.00         3
+
+    accuracy                           0.12        32
+   macro avg       0.05      0.27      0.08        32
+weighted avg       0.02      0.12      0.04        32
+
+
+=== Trait: Emotional stability ===
+Accuracy: 0.2500
+F1-score (macro): 0.2516
+              precision    recall  f1-score   support
+
+        high       0.11      0.50      0.17         4
+         low       0.50      0.31      0.38        13
+      medium       0.40      0.13      0.20        15
+
+    accuracy                           0.25        32
+   macro avg       0.34      0.31      0.25        32
+weighted avg       0.40      0.25      0.27        32
+
