@@ -25,7 +25,3 @@ Thumbs.db
 
 *.tmp
 *.bak
-
-echo "hf_personality_model/" >> .gitignore
-
-__pycache__/hf_personality_model/
