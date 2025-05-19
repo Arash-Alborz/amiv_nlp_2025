@@ -23,7 +23,7 @@ Each trait is classified as:
 
 ## Features
 
-- Accepts raw free-form text (e.g., job interview answers)
+- Accepts raw text (e.g., job interview answers)
 - Extracts both semantic (BERT) and psycholinguistic (LIWC) features
 - Outputs all 5 personality traits using a custom-trained ensemble
 - Can be used locally or deployed via Gradio (demo available)
