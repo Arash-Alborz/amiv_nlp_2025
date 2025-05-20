@@ -97,10 +97,10 @@ amiv_nlp_2025/
       ├── extraversion_classifier.pkl
       ├── conscientiousness_classifier.pkl
       ├── feature_scaler.pkl        # standardscaler() used in class
-      └── output_dict               # for getting liwc features from raw text
+      └── output.dict               # for getting liwc features from raw text
     ├── personality_model.py        # initializing the classifiers
-    ├── predoct_from_csv.ipynb      # CODE THAT CAN BE USED FOR TEST DATA
-    └── test_personality_model      # code for testing the model on raw text
+    ├── predict_from_csv.ipynb      # CODE THAT CAN BE USED FOR TEST DATA
+    └── test_personality_model.py      # code for testing the model on raw text
 ├── .gitattributes
 ├── .gitignore
 ├── README.dm
@@ -121,15 +121,14 @@ amiv_nlp_2025/
   - `MLPClassifier`
   - `SVC`
   - `Logistic Regression`
-- Each trait has a separate classifier
 - Features are scaled with `StandardScaler`
 - Continuous values are converted to labels using the following rules:
 
 | Score Range       | Label   |
 |-------------------|---------|
-| 0 ≤ score ≤ 32    | Low     |
-| 33 ≤ score ≤ 66   | Medium  |
-| 67 ≤ score ≤ 100  | High    |
+| 0 ≤ score ≤ 32    | low     |
+| 33 ≤ score ≤ 66   | medium  |
+| 67 ≤ score ≤ 100  | high    |
 
 ---
 
